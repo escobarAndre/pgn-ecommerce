@@ -1,5 +1,4 @@
 <template>
-    <h1>Product works!</h1>
     <div class="grid">
         
         <div class="col-2">
@@ -10,7 +9,7 @@
                 <div class="img4"></div>
                 <div class="img5"></div>
             </div>
-            <img style="width: 100%; position: relative" src="https://render.fineartamerica.com/images/rendered/default/metal-print/6.5/10/break/images-medium-5/a-brooklyn-perspective-az-jackson.jpg" alt="">
+            <img style="width: 100%; height: 45rem" src="https://render.fineartamerica.com/images/rendered/default/metal-print/6.5/10/break/images-medium-5/a-brooklyn-perspective-az-jackson.jpg" alt="">
         </div>
         <div class="col-3">
             <div>
@@ -64,45 +63,47 @@
                         </div>
                     </div>
                     <div>
-                        <div v-on:click="geralButton()" @dblclick="disableButton()" class="third-level__button" >
-                            <img style="width: 3rem; marginRight: 1rem" src="https://render.fineartamerica.com/images/rendered/small/metal-print/images-square-real-5/a-brooklyn-perspective-az-jackson.jpg" alt="">
-                            <h4 style="fontWeight: 300; fontSize: 1.3rem; marginRight: 1rem">Metal Print</h4>
-                            <i style="fontWeight: 800; fontSize: 1.2rem; color: grey" class="pi pi-chevron-down"></i>
+                        <div style="marginBottom: 2rem">
+                            <div v-on:click="geralButton()" @dblclick="disableButton()" class="third-level__button" >
+                                <img style="width: 3rem; marginRight: 1rem" src="https://render.fineartamerica.com/images/rendered/small/metal-print/images-square-real-5/a-brooklyn-perspective-az-jackson.jpg" alt="">
+                                <h4 style="fontWeight: 300; fontSize: 1.3rem; marginRight: 1rem">Metal Print</h4>
+                                <i style="fontWeight: 800; fontSize: 1.2rem; color: grey" class="pi pi-chevron-down"></i>
+                            </div>
+                            <div v-on:click="disableButton()" v-if="Button === 1" class="third-level__button">
+                                <img style="width: 3rem; marginRight: 1rem" src="https://render.fineartamerica.com/images/rendered/small/canvas-print/mirror/break/images-square-real-5/a-brooklyn-perspective-az-jackson-canvas-print.jpg" alt="">
+                                <h4 style="fontWeight: 300; fontSize: 1.3rem; marginRight: 1rem">Canvas Print</h4>
+                            </div>  
+                            <div v-on:click="disableButton()" v-if="Button === 1" class="third-level__button">
+                                <img style="width: 3rem; marginRight: 1rem" src="https://render.fineartamerica.com/images/rendered/small/framed-print/images-square-real-5/a-brooklyn-perspective-az-jackson.jpg" alt="">
+                                <h4 style="fontWeight: 300; fontSize: 1.3rem; marginRight: 1rem">Framed Print</h4>
+                            </div>  
+                            <div v-on:click="disableButton()" v-if="Button === 1" class="third-level__button">
+                                <img style="width: 3rem; marginRight: 1rem" src="https://render.fineartamerica.com/images/rendered/small/metal-print/images-square-real-5/a-brooklyn-perspective-az-jackson.jpg" alt="">
+                                <h4 style="fontWeight: 300; fontSize: 1.3rem; marginRight: 1rem">Art Print</h4>
+                            </div>  
+                            <div v-on:click="disableButton()" v-if="Button === 1" class="third-level__button">
+                                <img style="width: 3rem; marginRight: 1rem" src="https://render.fineartamerica.com/images/rendered/small/print/images-square-real-5/a-brooklyn-perspective-az-jackson.jpg" alt="">
+                                <h4 style="fontWeight: 300; fontSize: 1.3rem; marginRight: 1rem">Poster Print</h4>
+                            </div>  
+                            <div v-on:click="disableButton()" v-if="Button === 1" class="third-level__button">
+                                <img style="width: 3rem; marginRight: 1rem" src="https://render.fineartamerica.com/images/rendered/small/print/images-square-real-5/a-brooklyn-perspective-az-jackson.jpg" alt="">
+                                <h4 style="fontWeight: 300; fontSize: 1.3rem; marginRight: 1rem">Acrylic Print</h4>
+                            </div>  
+                            <div v-on:click="disableButton()" v-if="Button === 1" class="third-level__button">
+                                <img style="width: 3rem; marginRight: 1rem" src="https://render.fineartamerica.com/images/rendered/small/wood-print/images-square-real-5/a-brooklyn-perspective-az-jackson.jpg" alt="">
+                                <h4 style="fontWeight: 300; fontSize: 1.3rem; marginRight: 1rem">Wood Print</h4>
+                            </div>
+                        </div>  
                         </div>
-                        <div v-on:click="disableButton()" v-if="Button === 1" class="third-level__button">
-                            <img style="width: 3rem; marginRight: 1rem" src="https://render.fineartamerica.com/images/rendered/small/canvas-print/mirror/break/images-square-real-5/a-brooklyn-perspective-az-jackson-canvas-print.jpg" alt="">
-                            <h4 style="fontWeight: 300; fontSize: 1.3rem; marginRight: 1rem">Canvas Print</h4>
-                        </div>  
-                        <div v-on:click="disableButton()" v-if="Button === 1" class="third-level__button">
-                            <img style="width: 3rem; marginRight: 1rem" src="https://render.fineartamerica.com/images/rendered/small/framed-print/images-square-real-5/a-brooklyn-perspective-az-jackson.jpg" alt="">
-                            <h4 style="fontWeight: 300; fontSize: 1.3rem; marginRight: 1rem">Framed Print</h4>
-                        </div>  
-                        <div v-on:click="disableButton()" v-if="Button === 1" class="third-level__button">
-                            <img style="width: 3rem; marginRight: 1rem" src="https://render.fineartamerica.com/images/rendered/small/metal-print/images-square-real-5/a-brooklyn-perspective-az-jackson.jpg" alt="">
-                            <h4 style="fontWeight: 300; fontSize: 1.3rem; marginRight: 1rem">Art Print</h4>
-                        </div>  
-                        <div v-on:click="disableButton()" v-if="Button === 1" class="third-level__button">
-                            <img style="width: 3rem; marginRight: 1rem" src="https://render.fineartamerica.com/images/rendered/small/print/images-square-real-5/a-brooklyn-perspective-az-jackson.jpg" alt="">
-                            <h4 style="fontWeight: 300; fontSize: 1.3rem; marginRight: 1rem">Poster Print</h4>
-                        </div>  
-                        <div v-on:click="disableButton()" v-if="Button === 1" class="third-level__button">
-                            <img style="width: 3rem; marginRight: 1rem" src="https://render.fineartamerica.com/images/rendered/small/print/images-square-real-5/a-brooklyn-perspective-az-jackson.jpg" alt="">
-                            <h4 style="fontWeight: 300; fontSize: 1.3rem; marginRight: 1rem">Acrylic Print</h4>
-                        </div>  
-                        <div v-on:click="disableButton()" v-if="Button === 1" class="third-level__button">
-                            <img style="width: 3rem; marginRight: 1rem" src="https://render.fineartamerica.com/images/rendered/small/wood-print/images-square-real-5/a-brooklyn-perspective-az-jackson.jpg" alt="">
-                            <h4 style="fontWeight: 300; fontSize: 1.3rem; marginRight: 1rem">Wood Print</h4>
-                        </div>  
-                    </div>
-                    <div class="four-level">
-                        <div class="four-level__size">
-                            <h4 style="fontSize: .8rem; margin: 0 0 .5rem 0; fontWeight: 300">PRINT SIZE</h4>
-                            <Dropdown v-model="selectedSize" :options="sizes" optionLabel="name" placeholder="Select a Size" />
-                        </div>
-                        <div class="four-level__shape">
-                            <h4 style="fontSize: .8rem; margin: 0 0 .5rem 0; fontWeight: 300">SHAPE</h4>
-                            <Dropdown v-model="selectedShape" :options="shapes" optionLabel="name" placeholder="Select a Shape" />
-                        </div>
+                        <div class="four-level">
+                            <div class="four-level__size">
+                                <h4 style="fontSize: .8rem; margin: 0 0 .5rem 0; fontWeight: 300">PRINT SIZE</h4>
+                                <Dropdown v-model="selectedSize" :options="sizes" optionLabel="name" placeholder="Select a Size" />
+                            </div>
+                            <div class="four-level__shape">
+                                <h4 style="fontSize: .8rem; margin: 0 0 .5rem 0; fontWeight: 300">SHAPE</h4>
+                                <Dropdown v-model="selectedShape" :options="shapes" optionLabel="name" placeholder="Select a Shape" />
+                            </div>
                     </div>
                     <div class="five-level">
                         <h5 class="five-level__head">PRODUCT DETAILS</h5>
